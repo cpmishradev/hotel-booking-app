@@ -6,13 +6,16 @@ const mongoose = require('mongoose');
 const app = express();
 
 // connect to mongodb
-mongoose.connect('mongodb://localhost/hms');
+mongoose.connect('mongodb://hotels:Exit%%1996@93.188.167.68:33017/hms');
+// mongoose.connect('mongodb://93.188.167.68:33017/hms');
+// mongoose.connect('mongodb://hotels:Exit%%1996@93.188.167.68:33017/hms');
+
 mongoose.Promise = global.Promise;
 
 app.use(bodyParser.json());
 
 // port
-const port = 8000;
+const port = 33017;
 
 // initialize routes
 app.use(express.Router().get('/', (req, res) => {res.send('<h1>Hotel Booking System</h1>');}));
